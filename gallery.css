@@ -1,0 +1,125 @@
+/* Gallery Page Styles */
+
+/* Gallery Hero Section */
+.gallery-hero {
+    padding: 150px 40px 60px;
+    text-align: center;
+    background-color: #f5e6d3;
+}
+
+.gallery-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.gallery-hero p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Why Choose Section */
+.gallery-why-choose {
+    background: transparent;
+    padding: 0 20%;
+    margin: 0 0 60px;
+    text-align: center;
+}
+
+.gallery-why-choose h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.gallery-why-choose p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Masonry Gallery Layout */
+.gallery-masonry {
+    padding: 0 80px 40px;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.masonry-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-item-masonry {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-masonry:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item-masonry img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item-masonry .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-masonry:hover .overlay {
+    transform: translateY(0);
+}
+
+.gallery-item-masonry .overlay span {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Gallery Learn More Button */
+.gallery-button-container {
+    text-align: center;
+    padding: 40px 0 60px;
+}
+
+.gallery-learn-more {
+    background: #3D2817;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-learn-more:hover {
+    background: #2d1f12;
+    transform: translateY(-2px);
+}

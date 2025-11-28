@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+   
+<section class="hero">
+<!-- Navigation -->
+<nav class="navbar">
+    <img src="logo.png" alt="FoodIQ Logo">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+    <div>
+        <img src="notification icon.png" alt="Notifications">
+        <img src="profile icon.png" alt="Profile">
+    </div>
+</nav>
+
+<script>
+    // Get current page filename
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Select all navbar links
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // Add 'active' class to the link matching current page
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === currentPage){
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+</script>
+
+  <div class="hero-left">
+    <div class="hero-text1">300 Calories</div>
+
+    <model-viewer src="banana bunch 3d model.glb"
+                  alt="Banana 3D Model"
+                  auto-rotate
+                  camera-controls
+                  disable-zoom
+                  shadow-intensity="1">
+    </model-viewer>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-text2">300 Calories</div>
+
+<model-viewer src="pink frosted donut 3d model.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-9.079deg 5.131deg 2.049m" field-of-view="30deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+  
+</model-viewer>
+  </div>
+</section>
+
+
+
+
+<section class="drinks-comparison">
+    <div class="container">
+        <div class="hero-section">
+            <h1>Swap Smart, Live Better</h1>
+            <p>See how simple swaps can make a big difference to your health.</p>
+        </div>
+
+        <h2 class="section-title">Drinks Comparison</h2>
+
+        <div class="drinks-grid">
+            <div class="drink-card">
+                <h3>Fresh Orange Juice</h3>
+                <div class="drink-image">
+                    <img src="./Glass_with_Orange_Juice_PNG_Vector_Clipart_Image 1.png" alt="">
+                </div>
+                <div class="calories">100 Calories</div>
+                <div class="description">Natural sugar from fruit</div>
+            </div>
+
+            <div class="drink-card">
+                <h3>Soft Drink</h3>
+                <div class="drink-image">
+                    <model-viewer src="cola glass 3d model.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+</model-viewer>
+
+                </div>
+                <div class="calories">200 Calories</div>
+                <div class="description">All sugar, no nutrients.</div>
+            </div>
+
+            <div class="drink-card">
+                <h3>Orange Juice</h3>
+                <div class="drink-image">
+<model-viewer src="orange juice bottle 3d model.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    </div>
+</model-viewer>
+                <div class="calories">150 Calories</div>
+                <div class="description">Some added sugar</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="food-swaps-section">
+    <h2 class="section-title">Food Swaps</h2>
+
+    <div class="swaps-container">
+        <div class="swap-card">
+            <h3>Fried Potato</h3>
+            <div class="food-image">
+    <model-viewer src="french fries bucket 3d model (1).glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="79.34deg 83.68deg 2.298m" field-of-view="30deg">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    </model-viewer>
+            </div>
+            <div class="calories">100 Calories</div>
+        </div>
+
+        <div class="swap-card">
+            <h3>Mashed Potato</h3>
+            <div class="food-image">
+                <img src="./mashed-potatoes-white-bowl 1.png" alt="">
+            </div>
+            <div class="calories">200 Calories</div>
+        </div>
+    </div>
+
+    <div class="descriptions">
+        <div class="description">More Calories, Less Full</div>
+        <div class="description">Less Calories, More Full</div>
+    </div>
+
+    <div class="button-container">
+        <a href="#" class="learn-more-btn">Learn More</a>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <div class="title-section">
+            <div class="emoji-brain">🧠</div>
+            <h1>Did You Know?</h1>
+        </div>
+
+        <div class="info-box">
+            <p>A can of soda has up to 10 teaspoons of sugar that's more than your body needs for the whole day!</p>
+        </div>
+
+        <div class="info-box">
+            <p>Colorful plates aren't just pretty — eating more colors usually means more vitamins and minerals.</p>
+        </div>
+
+        <div class="info-box">
+            <p>A can of soda has up to 10 teaspoons of sugar that's more than your body needs for the whole day!</p>
+        </div>
+
+        <div class="info-box">
+            <p>Colorful plates aren't just pretty — eating more colors usually means more vitamins and minerals.</p>
+        </div>
+
+        <div class="btn-wrapper">
+            <button class="cta-button">Learn More</button>
+        </div>
+    </div>
+</section>
+
+
+<div class="content-wrap2">
+        <h1 class="main-heading">Healthy Hack</h1>
+        
+        <div class="card-layout2">
+            <div class="image-container">
+                <img src="lemon.png" 
+                     alt="Glass of lemon water with lemon slices" 
+                     class="lemon-image2">
+            </div>
+            
+            <div class="text-content2">
+                <p class="description-text2">
+                    Craving fizz? Try lemon water zero sugar, same refreshment.
+                </p>
+                <button class="action-btn2">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+  <div class="footer-left">
+    <img src="logo.png" alt="FoodIQ Logo" class="footer-logo">
+  </div>
+
+  <div class="footer-center">
+    <div class="footer-column">
+      <h3>Explore</h3>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>+2–619–079–4501</p>
+      <p>+2–537–160–1274</p>
+      <p>FoodIQ459@gmail.com</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
